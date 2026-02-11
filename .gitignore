@@ -34,9 +34,3 @@ coverage/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Python (AI features)
-__pycache__/
-*.py[cod]
-.venv/
-venv/

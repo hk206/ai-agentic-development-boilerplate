@@ -9,7 +9,6 @@ AI支援によるプロダクト開発ライフサイクル全体をカバーす
 |---------|------|
 | フロントエンド | Next.js (App Router), TypeScript, Tailwind CSS |
 | バックエンド | Node.js, TypeScript |
-| AI機能 | Python（必要に応じて） |
 | テスト | Vitest（ユニット/統合）, Playwright（E2E） |
 | 外部サービス | Notion（プロジェクト管理/ドキュメント）, GitHub（コード/PR/Issues） |
 
