@@ -8,7 +8,7 @@ AI支援によるプロダクト開発ライフサイクル全体をカバーす
 | レイヤー | 技術 |
 |---------|------|
 | フロントエンド | Next.js (App Router), TypeScript, Tailwind CSS |
-| バックエンド | Node.js, TypeScript |
+| バックエンド | TypeScript, ドメイン駆動設計（DDD） |
 | テスト | Vitest（ユニット/統合）, Playwright（E2E） |
 | 外部サービス | Notion（プロジェクト管理/ドキュメント）, GitHub（コード/PR/Issues） |
 
@@ -162,9 +162,9 @@ Claude Code 上で `/コマンド名` で実行できるスキル。
 
 | ファイル | 内容 |
 |---------|------|
-| `coding-standards.md` | TypeScript厳格モード、`any`禁止、React規約、命名規則、Tailwind CSS |
+| `coding-standards.md` | TypeScript厳格モード、`any`禁止、React規約、命名規則、Tailwind CSS、DDD設計原則（エンティティ、値オブジェクト、リポジトリ、ユースケース） |
 | `git-workflow.md` | ブランチ命名（`feature/`、`fix/` 等）、Conventional Commits、PR運用 |
-| `project-structure.md` | Next.js App Router ディレクトリ構成、ファイル配置ルール |
+| `project-structure.md` | DDD レイヤー構成（Domain / Application / Infrastructure / Presentation）、ファイル配置ルール |
 
 ## 権限設定
 

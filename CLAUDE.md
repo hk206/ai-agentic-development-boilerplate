@@ -26,7 +26,7 @@ AI支援によるプロダクト開発ライフサイクル全体をカバーす
 ## 技術スタック
 
 - **フロントエンド**: Next.js (App Router), TypeScript, Tailwind CSS
-- **バックエンド**: Node.js, TypeScript
+- **バックエンド**: TypeScript, ドメイン駆動設計（DDD）
 - **テスト**: Vitest（ユニット/統合）, Playwright（E2E）
 - **外部サービス**: Notion（プロジェクト管理/ドキュメント）, GitHub（コード/PR/Issues）
 
