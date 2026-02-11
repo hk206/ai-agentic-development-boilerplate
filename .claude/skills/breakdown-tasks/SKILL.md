@@ -1,6 +1,6 @@
 ---
 name: breakdown-tasks
-description: ユーザーストーリーやPRDから実装タスクを分解する。スプリント計画やGitHub Issue作成のためにタスクを細分化するときに使用する。
+description: ユーザーストーリーやPRDから実装タスクを分解する。スプリント計画やタスク管理ツールへの登録のためにタスクを細分化するときに使用する。
 argument-hint: "[ユーザーストーリーファイルパスまたはPRDファイルパス]"
 allowed-tools: Read, Write, Edit, Glob, Bash
 ---
@@ -56,11 +56,9 @@ allowed-tools: Read, Write, Edit, Glob, Bash
 - **関連ストーリー**: US-XXX
 ```
 
-## GitHub Issue作成
+## タスク管理ツールへの登録
 
-`gh` CLIが利用可能な場合、タスクをGitHub Issuesとしても作成できる。
-ユーザーに確認してから実行すること。
+タスク分解完了後、ユーザーに登録先を確認すること:
 
-```bash
-gh issue create --title "TASK-001: [タスク名]" --body "[詳細]" --label "[種別]"
-```
+- **Notion**: `/sync-notion` スキルを使用してNotionのスプリントデータベースに登録する
+- **GitHub Issues**: `gh issue create` コマンドで Issue として作成する

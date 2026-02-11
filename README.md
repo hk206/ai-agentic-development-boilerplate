@@ -61,38 +61,57 @@ AI支援によるプロダクト開発ライフサイクル全体をカバーす
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) がインストール済みであること
 - Node.js, npm がインストール済みであること
-- （任意）`gh` CLI がインストール済みであること
+- `gh` CLI がインストール済みであること
+- Notion アカウントを持っていること
 
 ### 手順
 
 1. リポジトリをクローンまたはテンプレートとしてコピーする
-2. `settings.local.json` を作成する
+
+2. `settings.local.json` を作成し、GitHub トークンを設定する
 
 ```bash
 cp .claude/settings.local.json.example .claude/settings.local.json
 ```
 
-3. 必要な環境変数を `settings.local.json` に設定する
-
 ```jsonc
 {
   "env": {
-    "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_xxxxx"  // GitHub MCP連携用
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_xxxxx"
   }
 }
 ```
 
-4. フック用スクリプトに実行権限を付与する
+3. フック用スクリプトに実行権限を付与する
 
 ```bash
 chmod +x .claude/hooks/*.sh
 ```
 
-5. Claude Code を起動する
+4. Claude Code を起動する
 
 ```bash
 claude
 ```
+
+5. Notion MCP の OAuth 認証を行う
+
+```
+/mcp
+```
+
+Notion MCP を選択し、ブラウザで OAuth 認証を完了する。認証時にプロジェクトで使用するページへのアクセスを許可する。
+
+6. Notion プロジェクトページをセットアップする
+
+Claude Code に「Notion にプロジェクトページを作成して」と伝えると、以下の構造が自動作成される:
+
+- **要件定義** ページ（PRD 用）
+- **バックログ** データベース（ユーザーストーリー用）
+- **スプリント** データベース（タスク用）
+- **バグトラッカー** データベース（バグレポート用）
+
+既存の空ページを使いたい場合は、そのページの URL を Claude Code に伝える。
 
 ## エージェント
 
@@ -115,7 +134,7 @@ Claude Code 上で `/コマンド名` で実行できるスキル。
 | `/ideate-product` | プロダクト企画・構想（市場分析、Lean Canvas、MVP仮説） | `docs/product/` |
 | `/create-prd` | PRD（プロダクト要件定義書）作成 | `docs/prd/` |
 | `/create-user-stories` | ユーザーストーリー作成 | `docs/user-stories/` |
-| `/breakdown-tasks` | 実装タスク分解・GitHub Issue作成 | `docs/tasks/` |
+| `/breakdown-tasks` | 実装タスク分解・タスク管理ツール登録（Notion / GitHub Issues） | `docs/tasks/` |
 | `/design-component` | UIコンポーネント設計仕様書作成 | `docs/components/` |
 | `/plan-architecture` | アーキテクチャ設計（独立コンテキストで実行） | `docs/architecture/` |
 | `/write-tests` | テスト作成（ユニット/統合/E2E を自動判定） | 対象ファイルと同階層 |

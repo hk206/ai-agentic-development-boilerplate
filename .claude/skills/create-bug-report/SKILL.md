@@ -92,14 +92,9 @@ allowed-tools: Read, Write, Bash, Glob, Grep
 -
 ```
 
-## GitHub Issue作成
+## タスク管理ツールへの登録
 
-ユーザーに確認してから実行する:
+バグレポート作成後、ユーザーに登録先を確認すること:
 
-```bash
-gh issue create \
-  --title "[BUG] タイトル" \
-  --body "レポート本文" \
-  --label "bug" \
-  --label "[深刻度ラベル]"
-```
+- **Notion**: `/sync-notion` スキルを使用してNotionのバグトラッカーデータベースに登録する
+- **GitHub Issues**: `gh issue create` コマンドで Issue として作成する
