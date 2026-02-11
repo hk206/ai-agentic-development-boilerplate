@@ -33,6 +33,8 @@ AI支援によるプロダクト開発ライフサイクル全体をカバーす
     ├── agents/                    # カスタムエージェント定義
     │   ├── product-manager.md
     │   ├── designer.md
+    │   ├── frontend-engineer.md
+    │   ├── backend-engineer.md
     │   ├── code-reviewer.md
     │   ├── debugger.md
     │   └── qa-engineer.md
@@ -121,6 +123,8 @@ Claude Code に「Notion にプロジェクトページを作成して」と伝�
 |---|---|---|
 | `product-manager` | プロダクト企画・PRD作成・ユーザーストーリー・タスク分解 | 読み書き + Web検索 |
 | `designer` | UIコンポーネント設計・アクセシビリティレビュー | 読み書き + Web検索 |
+| `frontend-engineer` | Next.js / React / Tailwind CSS によるUI実装 | 読み書き |
+| `backend-engineer` | TypeScript + DDD によるドメインモデル・ユースケース・インフラ実装 | 読み書き |
 | `code-reviewer` | コード品質・セキュリティレビュー | **読み取り専用** |
 | `debugger` | バグ調査・パフォーマンス最適化・リファクタリング | 読み書き |
 | `qa-engineer` | テスト作成・バグレポート・カバレッジ分析 | 読み書き |

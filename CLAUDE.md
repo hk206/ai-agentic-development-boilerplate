@@ -61,6 +61,8 @@ AI支援によるプロダクト開発ライフサイクル全体をカバーす
 |---|---|
 | `product-manager` | プロダクト企画・構想、PRD作成、ユーザーストーリー、タスク分解、Notion連携 |
 | `designer` | UI/UX仕様書、コンポーネント設計、アクセシビリティ |
+| `frontend-engineer` | Next.js / React / Tailwind CSS によるUI実装 |
+| `backend-engineer` | TypeScript + DDD によるドメインモデル・ユースケース・インフラ実装 |
 | `code-reviewer` | コード品質・セキュリティレビュー（読み取り専用） |
 | `debugger` | バグ調査、パフォーマンス最適化、リファクタリング |
 | `qa-engineer` | テスト作成、バグレポート、カバレッジ分析 |
