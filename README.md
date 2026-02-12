@@ -8,9 +8,9 @@ AI支援によるプロダクト開発ライフサイクル全体をカバーす
 | レイヤー | 技術 |
 |---------|------|
 | フロントエンド | Next.js (App Router), TypeScript, Tailwind CSS |
-| バックエンド | TypeScript, ドメイン駆動設計（DDD） |
+| バックエンド | TypeScript |
 | テスト | Vitest（ユニット/統合）, Playwright（E2E） |
-| 外部サービス | Notion（プロジェクト管理/ドキュメント）, GitHub（コード/PR/Issues） |
+| 外部サービス | Notion（プロジェクト管理/ドキュメント）, GitHub（コード/PR） |
 
 ## ディレクトリ構成
 
@@ -64,7 +64,6 @@ AI支援によるプロダクト開発ライフサイクル全体をカバーす
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) がインストール済みであること
 - Node.js, npm がインストール済みであること
 - `gh` CLI がインストール済みであること
-- Notion アカウントを持っていること
 
 ### 手順
 
@@ -96,7 +95,7 @@ chmod +x .claude/hooks/*.sh
 claude
 ```
 
-5. Notion MCP の OAuth 認証を行う
+5. Notion MCP の OAuth 認証を行う(オプション)
 
 ```
 /mcp
@@ -104,7 +103,7 @@ claude
 
 Notion MCP を選択し、ブラウザで OAuth 認証を完了する。認証時にプロジェクトで使用するページへのアクセスを許可する。
 
-6. Notion プロジェクトページをセットアップする
+6. Notion プロジェクトページをセットアップする(オプション)
 
 Claude Code に「Notion にプロジェクトページを作成して」と伝えると、以下の構造が自動作成される:
 
